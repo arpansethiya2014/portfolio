@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
   <style>
     :root {
       --bg: #070b14;
@@ -652,6 +654,229 @@
 }
 
 
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+#certifications {
+    padding: 105px 0 25px;
+}
+
+
+#certifications .section-head {
+    margin-bottom: 45px;
+}
+
+#certifications .section-head p {
+    max-width: 650px;
+    margin-top: 12px;
+    opacity: 0.7;
+    line-height: 1.7;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.certification-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    padding: 28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+
+    overflow: hidden;
+}
+
+.certification-card::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: -60px;
+    right: -60px;
+
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 50%;
+}
+
+.certification-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.06);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Certification Icon */
+
+.cert-icon {
+    min-width: 68px;
+    width: 68px;
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    font-size: 30px;
+
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    transition: transform 0.3s ease;
+}
+
+.certification-card:hover .cert-icon {
+    transform: scale(1.08) rotate(-3deg);
+}
+
+
+/* Individual icons */
+
+.java-icon {
+    color: #f89820;
+}
+
+.rest-icon {
+    color: #61dafb;
+}
+
+.spring-icon {
+    color: #6db33f;
+}
+
+.mysql-icon {
+    color: #00758f;
+}
+
+
+/* Certification Content */
+
+.cert-content {
+    flex: 1;
+}
+
+.cert-platform {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    opacity: 0.55;
+    margin-bottom: 7px;
+}
+
+.cert-content h3 {
+    margin: 0 0 15px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* Score */
+
+.cert-score {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 210px;
+
+    padding: 9px 13px;
+
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    font-size: 13px;
+}
+
+.cert-score span {
+    opacity: 0.65;
+}
+
+.cert-score strong {
+    font-size: 15px;
+}
+
+
+/* Verified */
+
+.cert-status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 13px;
+
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.cert-status i {
+    font-size: 11px;
+    color: #6db33f;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certification-card {
+        padding: 22px;
+    }
+
+    .cert-icon {
+        min-width: 58px;
+        width: 58px;
+        height: 58px;
+        font-size: 25px;
+    }
+
+    .cert-content h3 {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .certification-card {
+        gap: 16px;
+    }
+
+    .cert-icon {
+        min-width: 52px;
+        width: 52px;
+        height: 52px;
+        font-size: 22px;
+    }
+
+    .cert-platform {
+        font-size: 9px;
+    }
+}
+
 
   </style>
 </head>
@@ -748,7 +973,7 @@
         </a>
       <button class="menu" aria-label="Open menu" onclick="toggleMenu()">☰</button>
       <div class="nav-links" id="navLinks">
-        <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a>
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#experience">Experience</a>
         <a href="#focus">Expertise</a><a href="#education">Education</a><a href="#contact">Contact</a>
       </div>
     </div>
@@ -829,8 +1054,129 @@
         </div>
       </div>
     </section>
+	
+	<!-- Certifications Section -->
+<section id="certifications">
+    <div class="container">
 
-   
+        <div class="section-head reveal">
+            <div class="section-kicker">// certifications</div>
+            <h2><h2>Certifications & Assessments.</h2></h2>
+            <p>
+                Verified skill assessments demonstrating my proficiency
+                across core Java development technologies.
+            </p>
+        </div>
+
+        <div class="certifications-grid">
+
+            <!-- Java -->
+            <article class="certification-card reveal">
+                <div class="cert-icon java-icon">
+                    <i class="fa-brands fa-java"></i>
+                </div>
+
+                <div class="cert-content">
+                    <div class="cert-platform">
+                        LINKEDIN SKILL BADGE
+                    </div>
+
+                    <h3>Java</h3>
+
+                    <div class="cert-score">
+                        <span>Score</span>
+                        <strong>9/10</strong>
+                    </div>
+
+                    <div class="cert-status">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Skill Verified
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- REST APIs -->
+            <article class="certification-card reveal">
+                <div class="cert-icon rest-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <div class="cert-content">
+                    <div class="cert-platform">
+                        LINKEDIN SKILL BADGE
+                    </div>
+
+                    <h3>REST APIs</h3>
+
+                    <div class="cert-score">
+                        <span>Score</span>
+                        <strong>9.8/10</strong>
+                    </div>
+
+                    <div class="cert-status">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Skill Verified
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- Spring Framework -->
+            <article class="certification-card reveal">
+                <div class="cert-icon spring-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+
+                <div class="cert-content">
+                    <div class="cert-platform">
+                        LINKEDIN SKILL BADGE
+                    </div>
+
+                    <h3>Spring Framework</h3>
+
+                    <div class="cert-score">
+                        <span>Score</span>
+                        <strong>10/10</strong>
+                    </div>
+
+                    <div class="cert-status">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Skill Verified
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- MySQL -->
+            <article class="certification-card reveal">
+                <div class="cert-icon mysql-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+
+                <div class="cert-content">
+                    <div class="cert-platform">
+                        LINKEDIN SKILL BADGE
+                    </div>
+
+                    <h3>MySQL</h3>
+
+                    <div class="cert-score">
+                        <span>Score</span>
+                        <strong>10/10</strong>
+                    </div>
+
+                    <div class="cert-status">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Skill Verified
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
 <section id="experience">
   <div class="container">
 
