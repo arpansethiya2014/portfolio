@@ -591,6 +591,68 @@
     }
 }
 
+/* Company Header */
+.company-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+/* Company Logo Box */
+.company-logo {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo */
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Job title */
+.company-header h3 {
+  margin: 0 0 6px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .company-header {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .company-logo {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    padding: 6px;
+  }
+
+  .company-header h3 {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .company-header .meta {
+    font-size: 11px;
+  }
+}
+
+
+
   </style>
 </head>
 <body>
@@ -768,48 +830,116 @@
       </div>
     </section>
 
-    <section id="experience">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="section-kicker">// career</div>
-          <h2>Experience timeline.</h2>
-        </div>
-        <div class="panel reveal">
-          <div class="timeline">
-            <article class="job">
+   
+<section id="experience">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <div class="section-kicker">// career</div>
+      <h2>Experience timeline.</h2>
+    </div>
+
+    <div class="panel reveal">
+      <div class="timeline">
+
+        <!-- Synechron -->
+        <article class="job">
+          <div class="company-header">
+            <div class="company-logo">
+              <img src="assets/synechron-logo.png"
+                   alt="Synechron logo">
+            </div>
+            <div>
               <h3>Sr. Associate Technology — Synechron Technologies Pvt. Ltd.</h3>
               <div class="meta">APR 2025 — PRESENT · PUNE</div>
-              <p>Java Developer contributing to enterprise-grade applications across design, development, testing, deployment and maintenance.</p>
-              <ul>
-                <li>Java, Spring Boot, Microservices, Hibernate, REST APIs, Apache Spark and AWS.</li>
-                <li>Worked on a strategic financial accounting platform supporting data enrichment and accounting entries.</li>
-                <li>Collaborated across teams, optimized performance and resolved production issues.</li>
-              </ul>
-            </article>
-            <article class="job">
+            </div>
+          </div>
+
+          <p>
+            Java Developer contributing to enterprise-grade applications
+            across design, development, testing, deployment and maintenance.
+          </p>
+
+          <ul>
+            <li>Java, Spring Boot, Microservices, Hibernate, REST APIs, Apache Spark and AWS.</li>
+            <li>Worked on a strategic financial accounting platform supporting data enrichment and accounting entries.</li>
+            <li>Collaborated across teams, optimized performance and resolved production issues.</li>
+          </ul>
+        </article>
+
+
+        <!-- Capgemini -->
+        <article class="job">
+          <div class="company-header">
+            <div class="company-logo">
+              <img src="assets/capgemini-logo.png"
+                   alt="Capgemini logo">
+            </div>
+            <div>
               <h3>Senior Consultant — Capgemini Technology Services India Limited</h3>
               <div class="meta">MAY 2024 — SEP 2024 · PUNE</div>
-              <p>Supported project environment setup, requirements discussions, initial code reviews, documentation and development activities.</p>
-            </article>
-            <article class="job">
+            </div>
+          </div>
+
+          <p>
+            Supported project environment setup, requirements discussions,
+            initial code reviews, documentation and development activities.
+          </p>
+        </article>
+
+
+        <!-- FidyPay -->
+        <article class="job">
+          <div class="company-header">
+            <div class="company-logo">
+              <img src="assets/fidypay-logo.png"
+                   alt="FidyPay logo">
+            </div>
+            <div>
               <h3>Project Lead / Tech Lead / SME — Jambopay Express Pvt. Ltd. (FidyPay)</h3>
               <div class="meta">APR 2019 — MAY 2024 · INDORE</div>
-              <p>Progressed through SME, Senior SME, Tech Lead and Project Lead responsibilities, combining hands-on Java engineering with technical leadership.</p>
-              <ul>
-                <li>Worked on FIDYPAY, a digital payment and financial services platform.</li>
-                <li>Platform capabilities included UPI, BBPS, eNACH, eKYC, connected banking, bill payments, recharges and ticket booking.</li>
-                <li>Developed and maintained scalable B2B APIs for payment integration and transaction management.</li>
-              </ul>
-            </article>
-            <article class="job">
+            </div>
+          </div>
+
+          <p>
+            Progressed through SME, Senior SME, Tech Lead and Project Lead
+            responsibilities, combining hands-on Java engineering with
+            technical leadership.
+          </p>
+
+          <ul>
+            <li>Worked on FIDYPAY, a digital payment and financial services platform.</li>
+            <li>Platform capabilities included UPI, BBPS, eNACH, eKYC, connected banking, bill payments, recharges and ticket booking.</li>
+            <li>Developed and maintained scalable B2B APIs for payment integration and transaction management.</li>
+          </ul>
+        </article>
+
+
+        <!-- Techment -->
+        <article class="job">
+          <div class="company-header">
+            <div class="company-logo">
+              <img src="assets/techment-logo.png"
+                   alt="Techment logo">
+            </div>
+            <div>
               <h3>Application Developer — MS Techment Technology Pvt. Ltd.</h3>
               <div class="meta">MAR 2020 — APR 2020 · INDORE</div>
-              <p>Designed, tested and maintained Java applications, participated in code reviews and troubleshooting, and collaborated on new features.</p>
-            </article>
+            </div>
           </div>
-        </div>
+
+          <p>
+            Designed, tested and maintained Java applications, participated
+            in code reviews and troubleshooting, and collaborated on new features.
+          </p>
+        </article>
+
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+
 
     <section id="focus">
       <div class="container">
@@ -898,7 +1028,7 @@
     const enableSound = document.getElementById("enableSound");
     const disableSound = document.getElementById("disableSound");
 
-    audio.volume = 0.4;
+    audio.volume = 0.9;
 
     // Show popup when page opens
     window.addEventListener("load", () => {
